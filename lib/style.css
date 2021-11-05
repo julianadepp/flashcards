@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+    max-width: 700px;
+}
+h1 {
+    text-align: center;
+    color: lightblue;
+
+}
+h2 {
+    text-align: center;
+    color: rgb(101, 200, 233);
+}
+.board {
+    background-color: lightcoral;
+    max-width: 700px;
+    display: flex;
+    padding: 20px 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    row-gap: 15px;
+}
+
+.cards {
+    width: 100px;
+    height: 150px;
+    background-color: navy;
+    border-radius: 5px;
+}
+.text {
+    color: lightblue;
+    text-align: center;
+    margin:auto;
+    
+
+}
+.hide {
+    display: none;
+}
+.show {
+    display:flex
+}
