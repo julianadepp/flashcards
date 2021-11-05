@@ -39,5 +39,5 @@ h2 {
     display: none;
 }
 .show {
-    display:flex
+    display:block;
 }
