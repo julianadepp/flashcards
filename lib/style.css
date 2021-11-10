@@ -56,6 +56,28 @@ h2 {
     margin: 80px auto;
     padding:0 25px ;
 }
+#modal-end {
+    background-color: rgba(0,0,0,0.4);
+ 	position: fixed;
+ 	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+    max-width: 700px;
+    margin: 8px;
+    z-index: 1; 
+    overflow: auto; 
+    display: none;
+}
+ #winner {
+    color: orangered;
+    background-color: white;
+	height: 350px;
+	width: 420px;
+	border-radius: 5px;
+    margin: 80px auto;
+    padding:0 25px ;
+ }
 .board {
     background-color: lightcoral;
     max-width: 700px;
