@@ -1,28 +1,49 @@
 body {
+    background-image: url(chalkboard.jpg);
+    background-repeat: repeat-y;
+    background-size: 100%;
     background-color: black;
-    max-width: 700px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 h1 {
     display: inline-block;
     text-align: center;
-    color: lightblue;
+    color: rgb(250, 212, 139);
+    font-family: 'Lacquer', cursive;
+    font-size: 48px;
     margin-left: 50%;
+    margin-bottom: 0;
     transform: translateX(-50%);
+    border-image: url(chalkline.png) 268;
+    border-bottom: 20px solid moccasin;
+    float: left
 }
 #score-box {
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
     display: inline-block;
     padding: 10px;
     border: 6px dotted white;
-    border-radius: 25px;
-    float: right;
+    border-image-source: url(chalkborder.png);
+    border-image-slice: 20;
+    border-image-repeat: stretch;
+    border-image-width: 10px;
+    background: rgb(246,244,241,.1);
+    margin: 10px;
 }
 #counter-title {
-    color:darkgray;
+    font-family: 'Lacquer',cursive;
+    color:rgb(237, 119, 119);
+    font-size: 20px;
     margin:0;
     text-align: center;
+    text-shadow: 1px 1px 1px  rgb(39, 38, 38), -1px 1px 1px rgb(39, 38, 38);
 }
 #counter {
-    color: darkgray;
+    font-family: 'Lacquer',cursive;
+    color: rgb(214,217,99);
     text-align: center;
     font-size: 30px;
     margin: 10px 0;
@@ -30,9 +51,30 @@ h1 {
 h2 {
     display: inline-block;
     text-align: center;
-    color: rgb(101, 200, 233);
+    font-family: 'Lacquer', cursive;
+    font-size: 30px;
+    color: rgb(242, 163, 189);
     margin-left: 50%;
     transform: translateX(-50%);
+}
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+.button {
+    background: none;
+    border: 2px solid;
+    border-image-source: url(chalkborder.png);
+    border-image-slice: 20;
+    border-image-repeat: stretch;
+    border-image-width: 10px;
+    font-family: 'Lacquer', cursive;
+    font-size: 20px;
+    color: rgb(246,244,241);
+    line-height: 1;
+    margin: 0.5em;
+    padding: .5em 1em; 
+
 }
 #modal {
     background-color: rgba(0,0,0,0.4);
@@ -41,20 +83,44 @@ h2 {
 	left: 0;
 	height: 100%;
 	width: 100%;
-    max-width: 700px;
-    margin: 8px;
     z-index: 1; 
     overflow: auto; 
     display: none;
 }
 #instructions {
-    color: orangered;
-    background-color: white;
-	height: 350px;
-	width: 420px;
+    color: midnightblue;
+    font-family: 'Yomogi', cursive;
+    background-color: transparent;
+    background-image: url(https://www.freepnglogos.com/uploads/note-png/note-sticky-yellow-vector-graphic-pixabay-40.png);
+	background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    max-width: 800 px;
+    min-height: 300px;
 	border-radius: 5px;
-    margin: 80px auto;
-    padding:0 25px ;
+    margin: 50px auto;
+    padding:60px 0 ;
+}
+.modal-header {
+    margin: 0 0 0 50%;
+    max-width: 500px;
+    color: midnightblue;
+}
+.rules {
+    max-width: min(510px, 70vw);
+    margin: 10px auto;
+    text-align: left;
+    line-height: 1.2;
+}
+#close {
+    float: right;
+    text-decoration: none;
+    font-family: 'Lacquer', cursive;
+    color: midnightblue;
+    margin: 16px 0;
+    padding: 4px 6px;
+    border: 2px solid midnightblue;
+    border-radius: 20px;
 }
 #modal-end {
     background-color: rgba(0,0,0,0.4);
@@ -63,7 +129,7 @@ h2 {
 	left: 0;
 	height: 100%;
 	width: 100%;
-    max-width: 700px;
+    max-width: inherit;
     margin: 8px;
     z-index: 1; 
     overflow: auto; 
@@ -79,31 +145,42 @@ h2 {
     padding:0 25px ;
  }
 .board {
+    background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pf-s61-jir0059-eye_1.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=70ca5134dc4da2b16ed1a0b1aa64d1bd);
+    background-size: contain;
     background-color: lightcoral;
-    max-width: 700px;
+    max-width: inherit;
     display: flex;
     padding: 20px 10px;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: flex-start;
     row-gap: 15px;
+    column-gap: 10px;
+    border: 20px solid black;
+    border-image-source: url(woodframe.jpeg);
+    border-image-slice: 55;
+    border-image-repeat: stretch;
 }
 
 .cards {
-    width: 100px;
-    height: 150px;
-    border: 4px solid navy;
+    width: 210px;
+    height: 135px;
+    border: 4px solid none;
     background-color: navy;
-    border-radius: 5px;
+    background-image: url(indexcard.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2px;
     display:flex;
-    padding: 5px;
+    padding: 2px;
+    box-shadow: 5px 5px 7px -2px ;
 }
 .text {
-    color: lightblue;
+    color: midnightblue;
     text-align: center;
     margin:auto;
-    
-
+    font-family: 'Yomogi', cursive;
+    line-height: 1.2;
 }
 .hide {
     display: none;

@@ -6,24 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcards!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lacquer&family=New+Tegomin&family=Thasadith&family=Yomogi&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Flashcards!</h1>
+    <h2>test your skills...</h2>
     <div id="score-box">
-        <h3 id=counter-title>CLICK<br>COUNTER</h3>
+        <h3 id=counter-title>click<br>counter</h3>
         <p id="counter">0</p>
     </div>
-    <h2>Test Your Skills...</h2>
-    <button id="reset" onclick=resetBoard()>Reset</button>
-    <button id="undo">Undo</button>
-    <button id="how" >How to Play</button>
+    <div class="buttons">
+    <button class="button" id="reset" onclick=resetBoard()>reset</button>
+    <button class="button" id="undo">undo</button>
+    <button class="button" id="how" >how to play</button>
+    </div>
     <div id="modal">
         <div id="instructions">
-            <h2>How to Play Flashcards!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi ducimus quasi ullam laboriosam, hic porro tenetur, modi magni esse optio incidunt repellendus exercitationem, atque cumque laudantium perspiciatis culpa vel repudiandae?<br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis iusto vero minus animi labore laborum modi recusandae fugiat voluptate temporibus. Labore earum rerum iste mollitia exercitationem dolores suscipit. Maiores, iusto?
-            </p>
+            <h2 class="modal-header">How to Play Flashcards!</h2>
+            <p class="rules">The goal of the game is to match the words with their definitions.<br>Click on two cards to see what's on the other side. if the two cards match, they will disappear. If they don't, you must flip at least one back over and try again. Combine memory and knowledge to clear the board.
             <a id="close" href="#">Close</a>
+            </p>
         </div>
     </div>
     <div class=board>  
