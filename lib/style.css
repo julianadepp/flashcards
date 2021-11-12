@@ -129,21 +129,41 @@ h2 {
 	left: 0;
 	height: 100%;
 	width: 100%;
-    max-width: inherit;
-    margin: 8px;
     z-index: 1; 
     overflow: auto; 
     display: none;
 }
  #winner {
-    color: orangered;
-    background-color: white;
-	height: 350px;
-	width: 420px;
+    color: midnightblue;
+    font-family: 'Yomogi', cursive;
+    background-color: transparent;
+    max-width: 800 px;
+    min-height: 300px;
 	border-radius: 5px;
-    margin: 80px auto;
-    padding:0 25px ;
- }
+    margin: 50px auto;
+    padding:60px 0 ;
+}
+.won {
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    }
+#end {
+    text-decoration: none;
+    font-family: 'Lacquer', cursive;
+    font-size: 36px;
+    color: midnightblue;
+    
+    padding: 6px 20px 10px;
+    border: 5px solid midnightblue;
+    border-radius: 45% 40% 70% 50%;
+    background:whitesmoke;
+}
+#end-container{
+    width: 225px;
+    margin: 0 auto;
+}
 .board {
     background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pf-s61-jir0059-eye_1.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=70ca5134dc4da2b16ed1a0b1aa64d1bd);
     background-size: contain;
@@ -173,7 +193,8 @@ h2 {
     border-radius: 2px;
     display:flex;
     padding: 2px;
-    box-shadow: 5px 5px 7px -2px ;
+    transition: all .3s ease-in-out;
+    box-shadow: 5px 5px 7px -2px, ;
 }
 .text {
     color: midnightblue;
